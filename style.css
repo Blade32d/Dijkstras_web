@@ -1,0 +1,24 @@
+div{
+    display:flex;
+    align-items: center;
+    align-content: space-between;
+}
+img{
+    margin-left: 10%;
+    align-self: center;
+    width: 100%;
+    max-width: 66rem;
+    max-height: 33rem;
+}
+button{
+    color: aliceblue;
+    background-color: blueviolet;
+    margin-left: 10%;
+    border-radius: 50%;
+    border-style: none;
+    width: 5rem;
+    height: 5rem;
+}
+button:hover{
+    background-color: rgb(23, 30, 97);
+}
