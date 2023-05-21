@@ -16,10 +16,11 @@ function minDistance(dist,sptSet)
 }
 function printSolution(dist)
 {
-	document.write("<h1><u>Vertex  Distance from Source:-</u></h1><br>");
 	for(let i = 0; i < V; i++)
 	{
-        document.write("<h2><i>Disatance to "+i+" nodes from the selected node is :-"+dist[i]+"</i></h2><br>")
+		const item = document.createElement("h2");
+    	item.textContent = "Disatance from the selected node is :-"+dist[i];
+    	document.getElementById("result").appendChild(item);
 	}
 }
 function dijkstra(graph, src)
@@ -63,9 +64,19 @@ const graph = [
   document.getElementById('node3').addEventListener('click', () => selectNode(3));
   document.getElementById('node4').addEventListener('click', () => selectNode(4));
   
-  function selectNode(node) {
-    dijkstra(graph,node)
+//   function selectNode(node) {
+//     dijkstra(graph,node)
+//   }
+
+function selectNode(node) {
+	
+	const resultDiv = document.getElementById("result");
+	while (resultDiv.firstChild) {
+	  resultDiv.removeChild(resultDiv.firstChild);
+	}
+	dijkstra(graph, node);
   }
+  
   
 
 
