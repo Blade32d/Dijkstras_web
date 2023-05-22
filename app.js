@@ -19,7 +19,7 @@ function printSolution(dist)
 	for(let i = 0; i < V; i++)
 	{
 		const item = document.createElement("h2");
-    	item.textContent = "Disatance from the selected node is :-"+dist[i];
+    	item.textContent = "("+dist[i]+")";
     	document.getElementById("result").appendChild(item);
 	}
 }
@@ -64,10 +64,6 @@ const graph = [
   document.getElementById('node3').addEventListener('click', () => selectNode(3));
   document.getElementById('node4').addEventListener('click', () => selectNode(4));
   
-//   function selectNode(node) {
-//     dijkstra(graph,node)
-//   }
-
 function selectNode(node) {
 	
 	const resultDiv = document.getElementById("result");
